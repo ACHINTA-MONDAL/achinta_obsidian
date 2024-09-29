@@ -225,3 +225,12 @@ Delta tables, on the other hand, are tables that are created using the Delta Lak
 CI/CD:
 ---------
 It is a set of practices used to automate and streamline the process of building testing and deploying the code changes to different code changes to different environment.
+
+
+i increased shuffle partition count. i massively increased executor memory. and i changed the configuration settings that were recommended in the spark error logs. for now the job runs without warnings/ errors, but the runtime is severely increased.
+
+`--executor-memory 32g`  
+`--driver-memory 16g`  
+`--conf spark.executor.memoryOverhead=8g`  
+`--conf spark.driver.maxResultSize=4g`  
+`--conf spark.sql.shuffle.partitions=3000`
