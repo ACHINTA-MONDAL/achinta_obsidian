@@ -1,1 +1,0 @@
-# achinta_obsidian
